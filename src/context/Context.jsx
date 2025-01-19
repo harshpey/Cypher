@@ -15,11 +15,11 @@ const Context = (props) => {
   const onSent = async (prompt) => {
     setResultData("");
     setLoading(true);
+    setShowResult(true);
     const response = await runChat(input);
-    setShowResult(true)
-    setLoading(false);
     setResultData(response);
-    setInput("")
+    setLoading(false);
+    setInput("");
   };
 
   const contextValue = {
